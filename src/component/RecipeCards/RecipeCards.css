@@ -6,20 +6,27 @@
     --forth: #00A8E8;
   }
 
+
 .RecipeCardWraper{
     transform: translate(0,80px);
     width: 100%;
-    height: auto;
     display: grid;
     background-color: var(--second);
     position: absolute;
-    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));    
-    padding-left: 2rem;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-template-rows: auto auto;  
+    padding-left: 15px;  
+    gap: 30px;
+    height: auto;
+    padding-top: 0px;
 }
 
+.container{
+    padding-top: 100px;
+}
 .cards{
-    margin-top: 80px;
-    width: 300px;
+    
+    width: 250px;
     height: 400px;
     display: flex;
     border: 1px solid;

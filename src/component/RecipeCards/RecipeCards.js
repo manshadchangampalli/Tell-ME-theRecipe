@@ -1,10 +1,18 @@
 import React from 'react'
 import './RecipeCards.css'
 import {Group, Time} from '../../Assets';
+import {Link} from 'react-router-dom';
 
 function RecipeCards(props) {
     let {recipe}=props
     return (
+        <div >
+            <Link to={{
+                pathname:`/recipe/${recipe.id}`,
+                state:{
+                    hasDetails:true
+                }
+            }}>
         <div className="cards">
             <img className="recipeImage" src={recipe.image} alt="image" />
             <h3>{recipe.title}</h3>
@@ -19,6 +27,8 @@ function RecipeCards(props) {
                 </div>
                
             </div>
+        </div>
+        </Link>
         </div>
     )
 }
